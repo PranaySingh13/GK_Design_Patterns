@@ -4,6 +4,11 @@ public class LazyInitializationSingletonExample {
     public static void main(String[] args) {
 
         /**
+         * Singleton obj is not created until we need it and call the getInstance() method.
+         * This is called lazy instantiation.
+         */
+
+        /**
          * Here, we see private contructor is called and same hash code
          * for both instances as it creates a new instance (if none exists)
          * or returns the existing instance to the caller.
