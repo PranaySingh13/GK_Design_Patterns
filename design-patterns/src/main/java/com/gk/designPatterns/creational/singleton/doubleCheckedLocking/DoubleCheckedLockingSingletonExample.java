@@ -4,7 +4,7 @@ public class DoubleCheckedLockingSingletonExample {
     public static void main(String[] args) {
 
         /**
-         * Without volatile instance
+         * Without volatile instance, potential issues occurs like instruction reordering and caching.
          */
         Thread t1 = new Thread(() -> {
             Singleton1 singleton1 = Singleton1.getInstance();
