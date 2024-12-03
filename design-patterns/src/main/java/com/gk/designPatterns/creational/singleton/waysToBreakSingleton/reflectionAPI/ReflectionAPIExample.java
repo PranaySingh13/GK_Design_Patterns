@@ -15,13 +15,13 @@ public class ReflectionAPIExample {
         MySingleton instance1 = MySingleton.getInstance();
         System.out.println(instance1.hashCode());
 
-        Constructor<MySingleton>[] declaredConstructors = (Constructor<MySingleton>[]) MySingleton.class.getDeclaredConstructors();
+        Constructor[] declaredConstructors = MySingleton.class.getDeclaredConstructors();
         MySingleton instance2 = null;
 
-        for (Constructor<MySingleton> constructor : declaredConstructors) {
+        for (Constructor constructor : declaredConstructors) {
             // This will destroy the singleton pattern
             constructor.setAccessible(true);
-            instance2 = constructor.newInstance();
+            instance2 = (MySingleton) constructor.newInstance();
             break;
         }
 
@@ -31,5 +31,27 @@ public class ReflectionAPIExample {
          */
         System.out.println(instance2.hashCode());
         System.out.println(instance1.equals(instance2)); //false
+
+        /**
+         * Overcome Reflection issue Using Enum
+         */
+
+        MySingletonEnum instance3 = MySingletonEnum.INSTANCE;
+        System.out.println(instance3.hashCode());
+
+        Constructor[] declaredEnumConstructors = MySingletonEnum.class.getDeclaredConstructors();
+        MySingletonEnum instance4 = null;
+
+        /**
+         * Runtime error : Cannot reflectively create enum objects
+         */
+        for (Constructor constructor : declaredEnumConstructors) {
+            constructor.setAccessible(true);
+            instance4 = (MySingletonEnum) constructor.newInstance();
+            break;
+        }
+
+        System.out.println(instance4.hashCode());
+        System.out.println(instance3.equals(instance4));
     }
 }
