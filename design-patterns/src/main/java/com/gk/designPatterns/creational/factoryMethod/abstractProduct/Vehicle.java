@@ -1,4 +1,4 @@
-package main.java.com.gk.designPatterns.creational.factoryMethod.product;
+package main.java.com.gk.designPatterns.creational.factoryMethod.abstractProduct;
 
 /**
  * Product (Interface/Abstract Class): Defines the interface or abstract type of objects
