@@ -1,4 +1,6 @@
-package main.java.com.gk.designPatterns.creational.factoryMethod.product;
+package main.java.com.gk.designPatterns.creational.factoryMethod.concreteProducts;
+
+import main.java.com.gk.designPatterns.creational.factoryMethod.abstractProduct.Vehicle;
 
 /**
  * Concrete Product (Subclass): Implements the Product interface.
