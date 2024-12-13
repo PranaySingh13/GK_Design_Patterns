@@ -1,10 +1,10 @@
 package main.java.com.gk.designPatterns.creational.factoryMethod;
 
-import main.java.com.gk.designPatterns.creational.factoryMethod.factoryCreator.AutoRickshawFactory;
-import main.java.com.gk.designPatterns.creational.factoryMethod.factoryCreator.BikeFactory;
-import main.java.com.gk.designPatterns.creational.factoryMethod.factoryCreator.CarFactory;
-import main.java.com.gk.designPatterns.creational.factoryMethod.factoryCreator.VehicleFactory;
-import main.java.com.gk.designPatterns.creational.factoryMethod.product.Vehicle;
+import main.java.com.gk.designPatterns.creational.factoryMethod.concreteFactories.AutoRickshawFactory;
+import main.java.com.gk.designPatterns.creational.factoryMethod.concreteFactories.BikeFactory;
+import main.java.com.gk.designPatterns.creational.factoryMethod.concreteFactories.CarFactory;
+import main.java.com.gk.designPatterns.creational.factoryMethod.abstractFactory.VehicleFactory;
+import main.java.com.gk.designPatterns.creational.factoryMethod.abstractProduct.Vehicle;
 
 /**
  * The Factory Method Pattern provides an interface for creating objects in a superclass,
@@ -15,7 +15,7 @@ public class FactoryMethodRealTimeExample {
     public static void main(String[] args) {
 
         /**
-         * Booking Rides via ola based on no of people.
+         * Ola or Uber booking rides based on no of people.
          */
 
         bookOlaRides("Pranay Singh", 3);
